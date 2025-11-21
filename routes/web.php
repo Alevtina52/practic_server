@@ -18,3 +18,7 @@ Route::add(['GET','POST'], '/registrar/patient/add',
 Route::add(['GET','POST'], '/registrar/doctor/add',
     [Controller\RegistrarController::class, 'addDoctor'])
     ->middleware('auth', 'role:registrar,admin');
+
+Route::add(['GET', 'POST'], '/appointment/add',
+    [Controller\AppointmentController::class, 'add'])
+    ->middleware('auth', 'role:registrar,admin');
