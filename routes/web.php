@@ -22,3 +22,10 @@ Route::add(['GET','POST'], '/registrar/doctor/add',
 Route::add(['GET', 'POST'], '/appointment/add',
     [Controller\AppointmentController::class, 'add'])
     ->middleware('auth', 'role:registrar,admin');
+
+Route::add('GET', '/appointments',
+    [Controller\AppointmentController::class, 'list'])
+    ->middleware('auth', 'role:registrar,admin');
+
+Route::add('GET', '/appointments/cancel/{id}', [Controller\AppointmentController::class, 'cancelAppointment'])
+    ->middleware('auth', 'role:registrar,admin');

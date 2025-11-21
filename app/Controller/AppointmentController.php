@@ -51,4 +51,37 @@ class AppointmentController
             'doctors'  => $doctors
         ]);
     }
+
+    public function list(): string
+    {
+        $appointments = Appointment::with(['patient', 'doctor'])->get();
+
+        return new View('appointment.list', [
+            'appointments' => $appointments
+        ]);
+    }
+
+    public function cancelAppointment($id, Request $request): string
+    {
+        $appointment = \Model\Appointment::find($id);
+
+        if (!$appointment) {
+            $_SESSION['error'] = 'Запись не найдена';
+            app()->route->redirect('/appointments');
+            return '';
+        }
+
+        // Меняем статус
+        $appointment->status = 'canceled';
+        $appointment->save();
+
+        // Flash-сообщение
+        $_SESSION['success'] = 'Запись успешно отменена';
+
+        // Редирект обратно
+        app()->route->redirect('/appointments');
+        return '';
+    }
+
+
 }
