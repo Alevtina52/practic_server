@@ -10,3 +10,11 @@ Route::add('GET', '/logout', [Controller\Site::class, 'logout']);
 
 Route::add(['GET','POST'], '/registrar/add', [Controller\Site::class, 'addRegistrar'])
     ->middleware('auth', 'role:admin');
+
+Route::add(['GET','POST'], '/registrar/patient/add',
+    [Controller\RegistrarController::class, 'addPatient'])
+    ->middleware('auth', 'role:registrar,admin');
+
+Route::add(['GET','POST'], '/registrar/doctor/add',
+    [Controller\RegistrarController::class, 'addDoctor'])
+    ->middleware('auth', 'role:registrar,admin');
