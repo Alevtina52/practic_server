@@ -45,4 +45,31 @@ working']);
         Auth::logout();
         app()->route->redirect('/hello');
     }
+    public function addRegistrar(Request $request): string
+    {
+        if ($request->method === 'POST') {
+
+            $data = $request->all();
+
+            // Присваиваем роль вручную
+            $data['role'] = 'registrar';
+
+
+            // Создаём пользователя
+            if (\Model\User::create($data)) {
+                return new \Src\View('site.registrar-add', [
+                    'message' => 'Сотрудник регистратуры успешно добавлен!'
+                ]);
+            }
+
+            return new \Src\View('site.registrar-add', [
+                'message' => 'Ошибка при добавлении сотрудника'
+            ]);
+        }
+
+        return new \Src\View('site.registrar-add');
+    }
+
+
 }
+

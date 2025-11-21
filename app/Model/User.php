@@ -10,8 +10,10 @@ class User extends Model implements IdentityInterface
     protected $fillable = [
         'name',
         'login',
-        'password'
+        'password',
+        'role'
     ];
+
     protected static function booted()
     {
         static::created(function ($user) {

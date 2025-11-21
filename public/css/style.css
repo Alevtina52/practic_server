@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* --- Общий фон сайта --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a4eaff, #62a7ff);
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+header {
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+nav a {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #084d6c;
+    border: 1px solid rgba(255,255,255,0.6);
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.55);
+}
+
+/* --- КАРТОЧКИ (блоки форм) --- */
+.card {
+    width: 60%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.55); /* Больше матовости */
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(12px); /* Меньше blur */
+}
+
+/* --- Текст --- */
+.card h2, .card label {
+    color: #08334b;
+}
+
+.card input[type="text"],
+.card input[type="password"],
+.card input[type="date"],
+.card select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #8abbd9;
+    width: 200px;
+}
+
+/* --- Кнопка --- */
+button, .btn {
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: none;
+    background: #0c6fb8;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover, .btn:hover {
+    background: #09548a;
+}
+/* Контейнер формы */
+.login-box {
+    width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(12px);
+}
+
+/* Заголовок */
+.login-box h2 {
+    text-align: left;
+    color: #08334b;
+    margin-bottom: 15px;
+}
+
+/* Сообщения */
+.login-box h3 {
+    color: #b33131;
+    margin-bottom: 10px;
+}
+
+/* Форматирование лейблов */
+.login-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #08334b;
+}
+
+/* Поля */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #99c3dd;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* Кнопка */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #0c6fb8;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-box button:hover {
+    background: #094f82;
+}
+
+/* Контейнер формы */
+.login-box {
+    width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(12px);
+}
+
+/* Заголовок */
+.login-box h2 {
+    text-align: left;
+    color: #08334b;
+    margin-bottom: 15px;
+}
+
+/* Сообщения */
+.login-box h3 {
+    color: #b33131;
+    margin-bottom: 10px;
+}
+
+/* Форматирование лейблов */
+.login-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #08334b;
+}
+
+/* Поля */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #99c3dd;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* Кнопка */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #0c6fb8;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-box button:hover {
+    background: #094f82;
+}
