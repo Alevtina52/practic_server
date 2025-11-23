@@ -52,12 +52,28 @@ class AppointmentController
         ]);
     }
 
-    public function list(): string
+    public function list(Request $request): string
     {
-        $appointments = Appointment::with(['patient', 'doctor'])->get();
+        // Базовый запрос
+        $query = \Model\Appointment::with(['patient', 'doctor']);
 
-        return new View('appointment.list', [
-            'appointments' => $appointments
+        // Фильтрация по пациенту (если выбран)
+        $selectedPatient = $request->get('patient_id') ?? null;
+
+        if ($selectedPatient) {
+            $query->where('patient_id', $selectedPatient);
+        }
+
+        // Получаем записи
+        $appointments = $query->get();
+
+        // Список всех пациентов для фильтров
+        $patients = \Model\Patient::all();
+
+        return new \Src\View('appointment.list', [
+            'appointments' => $appointments,
+            'patients' => $patients,
+            'selectedPatient' => $selectedPatient
         ]);
     }
 

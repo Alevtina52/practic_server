@@ -1,5 +1,22 @@
 <h2>Список записей пациентов</h2>
 
+<form method="get" style="margin-bottom: 15px;">
+    <label>Выбрать пациента:</label>
+
+    <select name="patient_id" onchange="this.form.submit()">
+        <option value="">Все пациенты</option>
+
+        <?php foreach ($patients as $p): ?>
+            <option value="<?= $p->id ?>"
+                <?= ($selectedPatient == $p->id) ? 'selected' : '' ?>>
+                <?= htmlspecialchars($p->lastname . ' ' . $p->firstname) ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+
+    <noscript><button type="submit">Показать</button></noscript>
+</form>
+
 <!-- FLASH-сообщения -->
 <?php if (!empty($_SESSION['success'])): ?>
     <div class="alert alert-success">
@@ -43,7 +60,7 @@
 
             <td><?= htmlspecialchars($a->doctor->specialization) ?></td>
 
-            <td><?= htmlspecialchars($a->appointment_time) ?></td>
+            <td><?= htmlspecialchars($a->datetime) ?></td>
 
             <td>
                 <?php if ($a->status === 'active'): ?>
