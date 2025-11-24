@@ -1,32 +1,42 @@
-<h2>Добавление врача</h2>
+<div class="form-card">
+    <h2>Добавление врача</h2>
 
-<h3><?= $message ?? '' ?></h3>
+    <?php if (!empty($message)): ?>
+        <div class="form-message"><?= htmlspecialchars($message) ?></div>
+    <?php endif; ?>
 
-<form method="post">
+    <form method="post" class="styled-form">
 
-    <label>Фамилия
-        <input type="text" name="lastname" required>
-    </label>
+        <label>
+            Фамилия
+            <input type="text" name="lastname" required>
+        </label>
 
-    <label>Имя
-        <input type="text" name="firstname" required>
-    </label>
+        <label>
+            Имя
+            <input type="text" name="firstname" required>
+        </label>
 
-    <label>Отчество
-        <input type="text" name="middlename">
-    </label>
+        <label>
+            Отчество
+            <input type="text" name="middlename">
+        </label>
 
-    <label>Дата рождения
-        <input type="date" name="birthdate" required>
-    </label>
+        <label>
+            Дата рождения
+            <input type="date" name="birthdate" required>
+        </label>
 
-    <label>Должность
-        <input type="text" name="position" required>
-    </label>
+        <label>
+            Должность
+            <input type="text" name="position" required>
+        </label>
 
-    <label>Специализация
-        <input type="text" name="specialization" required>
-    </label>
+        <label>
+            Специализация
+            <input type="text" name="specialization" required>
+        </label>
 
-    <button>Добавить врача</button>
-</form>
+        <button class="btn-submit">Добавить врача</button>
+    </form>
+</div>

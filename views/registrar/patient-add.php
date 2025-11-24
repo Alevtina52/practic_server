@@ -1,24 +1,33 @@
-<h2>Добавление пациента</h2>
+<div class="card form-card">
 
-<h3><?= $message ?? '' ?></h3>
+    <h2>Добавление пациента</h2>
 
-<form method="post">
+    <?php if (!empty($message)): ?>
+        <div class="form-alert"><?= htmlspecialchars($message) ?></div>
+    <?php endif; ?>
 
-    <label>Фамилия
-        <input type="text" name="lastname" required>
-    </label>
+    <form method="post" class="glass-form">
 
-    <label>Имя
-        <input type="text" name="firstname" required>
-    </label>
+        <label>
+            Фамилия<br>
+            <input type="text" name="lastname" required>
+        </label>
 
-    <label>Отчество
-        <input type="text" name="middlename">
-    </label>
+        <label>
+            Имя<br>
+            <input type="text" name="firstname" required>
+        </label>
 
-    <label>Дата рождения
-        <input type="date" name="birthdate" required>
-    </label>
+        <label>
+            Отчество<br>
+            <input type="text" name="middlename">
+        </label>
 
-    <button>Добавить пациента</button>
-</form>
+        <label>
+            Дата рождения<br>
+            <input type="date" name="birthdate" required>
+        </label>
+
+        <button class="btn">Добавить пациента</button>
+    </form>
+</div>

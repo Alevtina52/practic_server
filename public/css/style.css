@@ -202,3 +202,659 @@ button:hover, .btn:hover {
 .login-box button:hover {
     background: #094f82;
 }
+
+/* --- Универсальная «карточка формы» --- */
+.form-card {
+    width: 450px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.65);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    backdrop-filter: blur(12px);
+}
+
+/* Заголовок */
+.form-card h2 {
+    color: #0b3c59;
+    margin-bottom: 18px;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Сообщение */
+.form-message {
+    color: #a12222;
+    background: rgba(255, 230, 230, 0.7);
+    border-left: 4px solid #d53030;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Сетка формы */
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Группа поля */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #08334b;
+    display:block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #8abbd9;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Кнопка */
+.btn-primary {
+    padding: 12px;
+    border-radius: 10px;
+    background: #0c6fb8;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.btn-primary:hover {
+    background: #094f82;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #08334b;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Контейнер таблицы */
+.table-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Таблица */
+.glass-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.glass-table th {
+    padding: 14px;
+    background: rgba(255,255,255,0.7);
+    font-weight: bold;
+    color: #084d6c;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.glass-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-size: 15px;
+    color: #08334b;
+}
+
+.glass-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Кнопка расписания */
+.btn-small {
+    padding: 6px 14px;
+    background: #0c6fb8;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.btn-small:hover {
+    background: #094f82;
+}
+
+/* Ячейка действия */
+.action-cell {
+    text-align: right;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #08334b;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Контейнер */
+.table-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Таблица */
+.glass-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.glass-table th {
+    padding: 14px;
+    background: rgba(255,255,255,0.7);
+    font-weight: bold;
+    color: #084d6c;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.glass-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 15px;
+    color: #08334b;
+}
+
+.glass-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Кнопка */
+.btn-small {
+    padding: 6px 14px;
+    background: #0c6fb8;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.btn-small:hover {
+    background: #094f82;
+}
+
+/* Выравнивание */
+.action-cell {
+    text-align: right;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #08334b;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.patient-info {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #08334b;
+}
+
+.empty-text {
+    text-align: center;
+    font-size: 17px;
+    color: #08334b;
+    margin-top: 20px;
+}
+
+/* Таблица */
+.table-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.glass-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.glass-table th {
+    padding: 14px;
+    background: rgba(255,255,255,0.7);
+    font-weight: bold;
+    color: #084d6c;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.glass-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 15px;
+    color: #08334b;
+}
+
+.glass-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Статусы */
+.status-active {
+    color: green;
+    font-weight: bold;
+}
+
+.status-canceled {
+    color: #555;
+    font-style: italic;
+}
+
+.row-canceled {
+    color: #777;
+}
+
+/* Назад */
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #08334b;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Заголовок */
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #08334b;
+}
+
+/* Основная карточка */
+.glass-card {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Таблица */
+.nice-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.nice-table th, .nice-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dce7f0;
+}
+
+.nice-table th {
+    background: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+    color: #08334b;
+    text-align: left;
+}
+
+.nice-table tr:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transition: 0.2s;
+}
+
+/* Кнопка удаления */
+.btn-delete {
+    padding: 6px 12px;
+    display: inline-block;
+    background: #d9534f;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.btn-delete:hover {
+    background: #b52b27;
+}
+
+/* Сообщения */
+.alert-success {
+    width: 80%;
+    margin: 0 auto 15px;
+    background: #e8f9e8;
+    border-left: 5px solid #2e8b57;
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: #2e8b57;
+}
+/* Контейнер карточки */
+.form-card {
+    width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(12px);
+}
+
+/* Заголовок внутри формы */
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #08334b;
+}
+
+/* Сообщение */
+.form-alert {
+    background: #e8f9e8;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    border-left: 5px solid #2e8b57;
+    border-radius: 6px;
+    color: #2e8b57;
+}
+
+/* Форматирование формы */
+.glass-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Лейблы */
+.glass-form label {
+    font-weight: bold;
+    color: #08334b;
+}
+
+/* Поля */
+.glass-form input[type="text"],
+.glass-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #99c3dd;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* Кнопка */
+.glass-form .btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    background: #0c6fb8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.glass-form .btn:hover {
+    background: #094f82;
+}
+
+/* --- Карточка формы --- */
+.form-card {
+    width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.55);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(12px);
+}
+
+.form-card h2 {
+    margin-bottom: 15px;
+    color: #08334b;
+    text-align: center;
+}
+
+/* Сообщение (успех/ошибка) */
+.form-message {
+    background: #e8f6ff;
+    border-left: 5px solid #1b80d6;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #084d6c;
+}
+
+/* --- Поля формы --- */
+.styled-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #08334b;
+}
+
+.styled-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #99c3dd;
+    background: rgba(255,255,255,0.8);
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+/* --- Кнопка --- */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #0c6fb8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.btn-submit:hover {
+    background: #094f82;
+}
+
+.form-card {
+    width: 520px;
+    margin: 40px auto;
+    padding: 30px 35px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #08334b;
+}
+
+.glass-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.glass-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #08334b;
+    font-size: 15px;
+}
+
+.glass-form select,
+.glass-form input[type="datetime-local"] {
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #99c3dd;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 16px;
+    background: #0c6fb8;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: #094f82;
+}
+
+/* Заголовок */
+.page-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #08334b;
+}
+
+/* Фильтр */
+.filter-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-form {
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.55);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+}
+
+.select-input {
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: 1px solid #99c3dd;
+    background: rgba(255,255,255,0.85);
+}
+
+/* Карточка с таблицей */
+.glass-card {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.45);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.6);
+    backdrop-filter: blur(12px);
+}
+
+/* Таблица */
+.glass-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.glass-table th {
+    background: rgba(255,255,255,0.7);
+    padding: 12px;
+    text-align: left;
+}
+
+.glass-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Статусы */
+.status {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.status-active {
+    background: #d3f9d3;
+    color: #2e8b57;
+}
+
+.status-canceled {
+    background: #f0f0f0;
+    color: #777;
+}
+
+/* Кнопка отмены */
+.btn-cancel {
+    color: white;
+    background: #d9534f;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-cancel:hover {
+    background: #b52d2a;
+}
+
+/* Строка отменённой записи */
+.row-canceled {
+    opacity: 0.6;
+}
+
+

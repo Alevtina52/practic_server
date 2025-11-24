@@ -1,31 +1,28 @@
-<h2>Список пациентов</h2>
+<h2 class="page-title">Список пациентов</h2>
 
-<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-    <thead>
-    <tr style="background: #f2f2f2;">
-        <th>ID</th>
-        <th>ФИО</th>
-        <th>Дата рождения</th>
-        <th>Действие</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    <?php foreach ($patients as $p): ?>
+<div class="table-container">
+    <table class="glass-table">
+        <thead>
         <tr>
-            <td><?= $p->id ?></td>
-            <td>
-                <?= htmlspecialchars($p->lastname . ' ' . $p->firstname . ' ' . $p->middlename) ?>
-            </td>
-            <td><?= htmlspecialchars($p->birthdate) ?></td>
-
-            <td>
-                <a href="/practic/patients/<?= $p->id ?>/appointments"
-                   style="font-weight: bold; color: blue;">
-                    Просмотреть записи
-                </a>
-            </td>
+            <th>ФИО</th>
+            <th>Дата рождения</th>
+            <th></th>
         </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+        <?php foreach ($patients as $p): ?>
+            <tr>
+                <td><?= htmlspecialchars("$p->lastname $p->firstname $p->middlename") ?></td>
+                <td><?= htmlspecialchars($p->birthdate) ?></td>
+
+                <td class="action-cell">
+                    <a href="/practic/patients/<?= $p->id ?>/appointments" class="btn-small">
+                        Записи
+                    </a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
