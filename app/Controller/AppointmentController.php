@@ -7,9 +7,11 @@ use Src\Request;
 use Model\Patient;
 use Model\Doctor;
 use Model\Appointment;
+use Src\Validator\DateValidator;
 
 class AppointmentController
 {
+
     public function add(Request $request): string
     {
         $patients = Patient::all();
@@ -17,8 +19,21 @@ class AppointmentController
 
         if ($request->method === 'POST') {
             $data = $request->all();
+            $errors = [];
 
-            // Проверяем — свободно ли время у врача
+            // Проверка — дата не в прошлом
+            $dateError = DateValidator::notPast($data['datetime'], 'Дата записи');
+            if ($dateError) $errors[] = $dateError;
+
+            if (!empty($errors)) {
+                return new View('appointment.add', [
+                    'patients' => $patients,
+                    'doctors'  => $doctors,
+                    'message'  => implode('<br>', $errors)
+                ]);
+            }
+
+            // Проверка занятости времени
             $exists = Appointment::where('doctor_id', $data['doctor_id'])
                 ->where('datetime', $data['datetime'])
                 ->exists();
@@ -51,6 +66,7 @@ class AppointmentController
             'doctors'  => $doctors
         ]);
     }
+
 
     public function list(Request $request): string
     {

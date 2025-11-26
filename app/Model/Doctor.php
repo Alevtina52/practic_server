@@ -13,7 +13,8 @@ class Doctor extends Model
         'middlename',
         'birthdate',
         'position',
-        'specialization'
+        'specialization',
+        'photo'
     ];
 
     public function schedule()

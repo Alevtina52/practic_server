@@ -2,6 +2,7 @@
 
 <div class="filter-box">
     <form method="get" class="filter-form">
+        <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
         <label>Пациент:</label>
 
         <select name="patient_id" class="select-input" onchange="this.form.submit()">

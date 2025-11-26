@@ -6,6 +6,8 @@
 
 <form method="post">
 
+    <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
+
     <label>Выберите врача:</label>
     <select name="doctor_id" required>
         <?php foreach ($doctors as $d): ?>

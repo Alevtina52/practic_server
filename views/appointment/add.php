@@ -1,8 +1,15 @@
 <div class="form-card">
     <h2>Запись пациента к врачу</h2>
-    <h3><?= $message ?? '' ?></h3>
+
+    <?php if (!empty($message)): ?>
+        <div class="success-message"><?= $message ?></div>
+    <?php endif; ?>
+
+
 
     <form method="post" class="glass-form">
+
+        <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
 
         <label>Пациент
             <select name="patient_id" required>

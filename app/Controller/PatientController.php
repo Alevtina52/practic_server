@@ -11,14 +11,24 @@ use Src\View;
 class PatientController
 {
     // Список всех пациентов
-    public function list(): string
+    public function list(Request $request): string
     {
-        $patients = Patient::all();
+        $search = trim($request->get('search') ?? '');
+
+        $query = Patient::query();
+
+        if ($search !== '') {
+            $query->whereRaw("CONCAT(lastname, ' ', firstname, ' ', middlename) LIKE ?", ["%$search%"]);
+        }
+
+        $patients = $query->get();
 
         return new View('patient.list', [
-            'patients' => $patients
+            'patients' => $patients,
+            'search' => $search
         ]);
     }
+
 
     // Врачи, к которым был записан пациент
     public function doctors($id): string
